@@ -276,8 +276,8 @@ h3 {
   justify-content: center;
 }
 
-#videos #slider #controls .prev,
-#videos #slider #controls .next {
+#videos #slider #controls #prev,
+#videos #slider #controls #next {
   border: none;
   height: 50px;
   width: 80px;
@@ -291,15 +291,69 @@ h3 {
   transition: all 0.3s ease;
 }
 
-#videos #slider #controls .prev:hover,
-#videos #slider #controls .next:hover {
+#videos #slider #controls #prev:hover,
+#videos #slider #controls #next:hover {
   background-color: rgb(37, 37, 37);
 }
 
 #videos #slider #current {
-  width: 1280px;
+  width: 100%;
+  height: 50%;
   margin: 50px auto;
   border: solid 1px #00c3ff;
+}
+
+#videos #slider #videos-container {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  justify-content: center;
+  overflow: auto;
+  justify-content: center;
+}
+
+#videos #slider #videos-container .item {
+  border: solid 1px #00c3ff;
+  cursor: pointer;
+  overflow: 320px;
+
+  min-width: 320px;
+  height: 185px;
+}
+
+#videos #slider #videos-container .item a {
+  position: relative;
+}
+
+#videos #slider #videos-container .item img {
+  object-fit: contain;
+  min-width: 320px;
+  height: 180px;
+  transition: opacity 0.3s ease;
+}
+
+#videos #slider #videos-container .item:hover img {
+  opacity: 0.6;
+  object-fit: contain;
+}
+
+#videos #slider #videos-container .item a::before {
+  font-family: "Material Icons";
+  font-size: 25px;
+  content: "play_arrow";
+  color: white;
+  position: absolute;
+  display: block;
+  left: 135px;
+  top: -95px;
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
 }
 
 /* Media Queris */
@@ -344,5 +398,14 @@ h3 {
     /* position: initial !important; */
     z-index: 100;
     width: 100%;
+  }
+
+  #slider #current {
+    width: 90%;
+    height: 80% !important;
+  }
+
+  #slider #videos-container {
+    display: none !important;
   }
 }
