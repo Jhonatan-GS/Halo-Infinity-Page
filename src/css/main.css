@@ -363,6 +363,7 @@ h3 {
 #multi-player {
   height: 100vh;
   background-image: url(../img/bg-multiplayer-min.jpeg);
+  background-size: cover;
   mask-repeat: no-repeat;
   display: flex;
   align-items: center;
