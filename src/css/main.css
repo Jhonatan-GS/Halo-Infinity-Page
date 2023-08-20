@@ -356,7 +356,42 @@ h3 {
   z-index: 100;
 }
 
-/* Media Queris */
+/* --- Fin Videos --- */
+
+/* --- Multiplayer --- */
+
+#multi-player {
+  height: 100vh;
+  background-image: url(../img/bg-multiplayer-min.jpeg);
+  mask-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.info {
+  line-height: 1.2;
+  padding: 40px;
+  width: 600px;
+  margin-right: 50px;
+  transition: background-color 0.3s ease;
+}
+
+.info p {
+  font-size: 1.3em;
+}
+
+/* --- Fin Multiplayer --- */
+
+/* --- Media Queris --- */
+
+@media screen and (max-width: 1520px) {
+  .info {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+  }
+}
+
 @media screen and (max-width: 1190px) {
   nav .link-hide {
     display: none;
@@ -372,6 +407,15 @@ h3 {
     position: initial !important;
     z-index: 100;
     width: 100%;
+  }
+
+  #multi-player {
+    background-position: center left;
+  }
+
+  .info {
+    width: 600px;
+    margin: 0 auto;
   }
 }
 
@@ -394,6 +438,10 @@ h3 {
     height: 60vh;
   }
 
+  h2 {
+    font-size: 2.5rem;
+  }
+
   #banner {
     /* position: initial !important; */
     z-index: 100;
@@ -408,4 +456,15 @@ h3 {
   #slider #videos-container {
     display: none !important;
   }
+
+  #multi-player {
+    background-position: -350px 0px;
+  }
+
+  .info {
+    width: 90%;
+    margin: 0 auto;
+  }
 }
+
+/* --- FIN Media Queris --- */
