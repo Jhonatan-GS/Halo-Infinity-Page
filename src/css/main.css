@@ -430,6 +430,15 @@ h3 {
 
 /* --- FIN GET THE GAME / STORE --- */
 
+/* --- FOOTER --- */
+footer {
+  height: 800px;
+  background-image: url(../img/master-chief-darkmode-min.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* --- Fin FOOTER --- */
+
 /* --- Media Queris --- */
 
 @media screen and (max-width: 1520px) {
@@ -476,6 +485,10 @@ h3 {
 
   #get-the-game .item-store .right {
     width: 100%;
+  }
+
+  footer {
+    background-position: center;
   }
 }
 
@@ -540,6 +553,11 @@ h3 {
   #get-the-game .item-store .right {
     text-align: center;
     width: 100%;
+  }
+
+  footer {
+    height: 400px;
+    background-position: center;
   }
 }
 
